@@ -1,6 +1,6 @@
 import requests
 import json
-
+import icecubeAPI
 import time
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -80,7 +80,8 @@ def postSelfTest():
 def main():
     ip_address = "10.10.11.8"
     icb_14 = requestObject(ip_address)
-
+    inventory = icb_14.getRequest(icecubeAPI.getInventory())
+    print(inventory)
 
 if __name__ == "__main__":
     main()
