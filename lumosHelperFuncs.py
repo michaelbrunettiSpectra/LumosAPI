@@ -45,8 +45,8 @@ def inventoryComparison(beforeInventory, afterInventory, srcAddress, destAddress
         return True
 
 # requestFunc = lambda + getSpecificTask request
-#ex. lambda: icb_14.getRequest(icecubeAPI.getSpecificTask(logGather[0]["taskID"]))
-def poller(requestFunc):
+#ex. lambda: icb_14.getRequest(icecubeAPI.getSpecificTask(logGather[0]["taskID"])) - function object
+def taskPoller(requestFunc):
     print("Polling started")
     while True:
         status = requestFunc()
@@ -55,12 +55,28 @@ def poller(requestFunc):
             print("Polling in progress")
         else:
             print("Polling completed")
-            break
+            return True
+
+# requestFunc = lambda + getLibraryStatus request
+#ex. lambda: icb_14.getRequest(icecubeAPI.getLibraryStatus()) - function object
+def statusPoller(requestFunc):
+    print("Polling started")
+    while True:
+        status = requestFunc()
+        if status[0]["ready"] == "Library degraded":
+            print("Library degraded")
+            return False
+        elif status[0]["ready"] is True:
+            print("Initialization finished")
+            return True
+        else:
+            print("Initializing")
+            time.sleep(10)
 
 # Uses the function getCurrentPackage() request in {libraryType}API.py module to get firmware versions per application.
 # This converts applications into their associated component type and creates a tuple of component type and version.
 # This is used with function firmwareCheck which compares FRU reported FWs to Application FWs.
-def convertedFirmwareVersions(firmwareList):
+def convertedApplicationToFirmwareVersions(firmwareList):
     componentList = []
     for component in firmwareList["firmware"]:
         if component["name"] == "dip-e":
@@ -76,9 +92,13 @@ def convertedFirmwareVersions(firmwareList):
             componentList.append(('LS', component['version']))
     return componentList
 
+# Uses the function getFruAllMetaData() request in {libraryType}API.py module to get firmware versions from FRUs.
+# This returns a list of tuples of FRU type and firmware version.
+# This is used with function firmwareCheck which compares FRU reported FWs to Application FWs.
 def firmwareFruList(fruList):
     return [(fru["type"], formatter(fru["fruFirmware"])) for fru in fruList["value"]]
 
+# This takes the output of function firmwareFruList and formats it to match the output of function convertedApplicationToFirmwareVersions
 def formatter(firmwareVersion):
     charString = ""
     charGroup = ""
@@ -110,6 +130,7 @@ def formatter(firmwareVersion):
             count += 1
     return charString
 
+# This compares the application reported firmware to the firmware being reported on FRUs
 def firmwareCheck(fruFirmware, actualFirmware):
     mismatchedFirmware = []
     for fruFw in fruFirmware:
@@ -125,6 +146,7 @@ def firmwareCheck(fruFirmware, actualFirmware):
     else:
         return mismatchedFirmware
 
+# This returns whether an application - "motion", "loglib", "lumos", "dip-e", "mysqld" is active or not.
 def systemCtlStatus(host, username, password, application):
     host = "10.10.11.156"
     username = "root"
@@ -138,3 +160,4 @@ def systemCtlStatus(host, username, password, application):
     client.close()
     if "active (running)" in response:
         return True
+

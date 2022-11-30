@@ -3,17 +3,15 @@ import requestLibrary
 import lumosHelperFuncs
 import libraryInfo
 
-def main():
 
-    library = requestLibrary.requestObject(libraryInfo.libraryIp)
+# Setup
+library = requestLibrary.requestObject(libraryInfo.libraryIp)
+
+def test_partitionDelete():
     partitionDelete = library.deleteRequest(icecubeAPI.deletePartition())
-    print(f"Delete Status Code: {partitionDelete[1]}")
+    assert partitionDelete[1] == 201
     statusPolling = lumosHelperFuncs.statusPoller(lambda: library.getRequest(icecubeAPI.getLibraryStatus()))
-    print(f"Status Polling: {statusPolling}")
+    assert statusPolling is True
     taskDelete = library.getRequest(icecubeAPI.getSpecificTask(partitionDelete[0]['taskID']))
-    print(f"Task Status Code: {taskDelete[1]}")
-    print(f"Task Delete Status code: {taskDelete[0]['state']}")
-
-
-if __name__ == "__main__":
-    main()
+    assert taskDelete[1] == 200
+    assert taskDelete[0]["state"] == "SUCCESSFUL"
