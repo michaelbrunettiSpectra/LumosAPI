@@ -98,6 +98,9 @@ def convertedApplicationToFirmwareVersions(firmwareList):
 def firmwareFruList(fruList):
     return [(fru["type"], formatter(fru["fruFirmware"])) for fru in fruList["value"]]
 
+def availableFruList(fruList):
+    return [fru["type"] for fru in fruList["value"]]
+
 # This takes the output of function firmwareFruList and formats it to match the output of function convertedApplicationToFirmwareVersions
 def formatter(firmwareVersion):
     charString = ""
