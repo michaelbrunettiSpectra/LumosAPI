@@ -96,6 +96,7 @@ class requestObject:
         with open(f"Logs_{datetime.now().strftime('%Y-%m-%dT%H_%M_%S')}.tar.gz", 'wb') as fd:
             for chunk in r.iter_content(chunk_size=128):
                 fd.write(chunk)
+        return r.status_code
 
     def postRequestUpload(self, requestFunc):
         api = requestFunc[0]

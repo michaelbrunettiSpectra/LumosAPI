@@ -47,30 +47,30 @@ def inventoryComparison(beforeInventory, afterInventory, srcAddress, destAddress
 # requestFunc = lambda + getSpecificTask request
 #ex. lambda: icb_14.getRequest(icecubeAPI.getSpecificTask(logGather[0]["taskID"])) - function object
 def taskPoller(requestFunc):
-    print("Polling started")
+    print("Task polling started")
     while True:
         status = requestFunc()
         if status[0]["state"] == "RUNNING":
             time.sleep(10)
-            print("Polling in progress")
+            print("Task polling in progress")
         else:
-            print("Polling completed")
+            print("Task polling completed")
             return True
 
 # requestFunc = lambda + getLibraryStatus request
 #ex. lambda: icb_14.getRequest(icecubeAPI.getLibraryStatus()) - function object
 def statusPoller(requestFunc):
-    print("Polling started")
+    print("Status polling started")
     while True:
         status = requestFunc()
-        if status[0]["ready"] == "Library degraded":
+        if status[0]["ready"] is True:
+            print("Library initialization finished")
+            return True
+        elif status[0]["ready"] is False and status[0]["status"] == "Library degraded":
             print("Library degraded")
             return False
-        elif status[0]["ready"] is True:
-            print("Initialization finished")
-            return True
         else:
-            print("Initializing")
+            print("Library initializing")
             time.sleep(10)
 
 # Uses the function getCurrentPackage() request in {libraryType}API.py module to get firmware versions per application.
@@ -97,6 +97,9 @@ def convertedApplicationToFirmwareVersions(firmwareList):
 # This is used with function firmwareCheck which compares FRU reported FWs to Application FWs.
 def firmwareFruList(fruList):
     return [(fru["type"], formatter(fru["fruFirmware"])) for fru in fruList["value"]]
+
+def availableFruList(fruList):
+    return [fru["type"] for fru in fruList["value"]]
 
 # This takes the output of function firmwareFruList and formats it to match the output of function convertedApplicationToFirmwareVersions
 def formatter(firmwareVersion):

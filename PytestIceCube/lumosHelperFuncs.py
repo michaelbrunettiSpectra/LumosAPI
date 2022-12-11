@@ -1,9 +1,11 @@
 import random
 import time
 import paramiko
+import os
+import tarfile
 
 # Returns the address of a full slot, containerType = "DRIVE" or "SLOT"
-def fullSlot(inventory, containerType):
+def fullElement(inventory, containerType):
     fullSlots = [storageElement for storageElement in inventory["value"] if "mediaBarcode" in storageElement and storageElement["containerType"] == containerType]
     # No full elements in the list
     if not fullSlots:
@@ -12,7 +14,7 @@ def fullSlot(inventory, containerType):
         return random.choice(fullSlots)["address"]
 
 # Returns the address of an empty slot, containerType = "DRIVE" or "SLOT"
-def emptySlot(inventory, containerType):
+def emptyElement(inventory, containerType):
     emptySlots = [storageElement for storageElement in inventory["value"] if "mediaBarcode" not in storageElement and storageElement["containerType"] == containerType]
     if not emptySlots:
         return None
@@ -164,3 +166,19 @@ def systemCtlStatus(host, username, password, application):
     if "active (running)" in response:
         return True
 
+def unzipLogs(logFileName):
+    file = tarfile.open(logFileName)
+    file.extractall('./unzippedLogs')
+    file.close()
+
+def logPathVerification(log_paths):
+    logDoesNotExist = []
+    for path in log_paths:
+        fullPath = "unzippedLogs" + path
+        isExist = os.path.exists(fullPath)
+        if isExist is False:
+            logDoesNotExist.append(path)
+    if not logDoesNotExist:
+        return True
+    else:
+        return logDoesNotExist

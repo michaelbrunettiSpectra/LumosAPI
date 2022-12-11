@@ -267,9 +267,9 @@ def getTasks(limit=None, state=None, taskType=None, tag=None, startTime=None, en
     if limit is not None:
         parameterList.append(f"limit={limit}")
     if state is not None:
-        parameterList.append((f"state={state}"))
+        parameterList.append(f"state={state}")
     if taskType is not None:
-        parameterList.append((f"taskType={taskType}"))
+        parameterList.append(f"taskType={taskType}")
     if tag is not None:
         parameterList.append(f"tag={tag}")
     if startTime is not None:

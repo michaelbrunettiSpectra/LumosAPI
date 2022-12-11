@@ -93,10 +93,11 @@ class requestObject:
             self.renewToken()
             r = requests.get(self.url + api, headers=self.requestHeader, verify=False)
             print(f"Request Status Code: {r.status_code}")
-        with open(f"Logs_{datetime.now().strftime('%Y-%m-%dT%H_%M_%S')}.tar.gz", 'wb') as fd:
+        logName = f"Logs_{datetime.now().strftime('%Y-%m-%dT%H_%M_%S')}.tar.gz"
+        with open(logName, 'wb') as fd:
             for chunk in r.iter_content(chunk_size=128):
                 fd.write(chunk)
-        return r.status_code
+        return logName, r.status_code
 
     def postRequestUpload(self, requestFunc):
         api = requestFunc[0]
@@ -104,17 +105,3 @@ class requestObject:
         r = requests.post(self.url + api, data=json.dumps(payload), headers=self.requestHeader, verify=False)
         pass
 
-
-def main():
-
-    ip_address = "10.10.11.156"
-    icb_14 = requestObject(ip_address)
-    currentPackage = icb_14.getRequest(icecubeAPI.getCurrentPackage())
-    print(currentPackage)
-    print("")
-    frus = icb_14.getRequest(icecubeAPI.getFruAllMetaData())
-    print(frus)
-
-
-if __name__ == "__main__":
-    main()

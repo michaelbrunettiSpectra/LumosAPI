@@ -3,7 +3,7 @@ import requestLibrary
 import lumosHelperFuncs
 
 def logger(statement):
-    with open('results.txt', 'a+') as f:
+    with open('MoveToAllChamberResults.txt', 'a+') as f:
         f.write(statement)
         f.write("\n")
 
