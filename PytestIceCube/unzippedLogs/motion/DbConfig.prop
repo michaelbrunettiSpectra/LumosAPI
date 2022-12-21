@@ -1,0 +1,12 @@
+database.hydra.path = /RCM_code/db/hydra.db
+database.hydra.blank.path = /RCM_code/hydra.db.blank
+database.hydra.volatile.path = 
+database.hydra.journal.path = 
+
+database.event.path = /RCM_code/db/event.db
+database.event.blank.path = /RCM_code/event.db.blank
+
+database.options.path = /RCM_code/db/options.db
+database.options.persistent.path = /RCM_code/db/options.db.bz2
+database.pools.path = /RCM_code/db/pools.db
+database.pools.persistent.path = /RCM_code/db/pools.db.bz2

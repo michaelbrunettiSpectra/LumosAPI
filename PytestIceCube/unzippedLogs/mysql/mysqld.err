@@ -1,0 +1,174 @@
+2022-12-16 20:56:37 0 [ERROR] mysqld: Can't lock aria control file '/var/lib/mysql/aria_log_control' for exclusive use, error: 11. Will retry for 30 seconds
+2022-12-16 20:56:42 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-16 20:56:42 0 [Note] InnoDB: Number of transaction pools: 1
+2022-12-16 20:56:42 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2022-12-16 20:56:42 0 [Note] InnoDB: Using Linux native AIO
+2022-12-16 20:56:42 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2022-12-16 20:56:42 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-16 20:56:42 0 [Note] InnoDB: 128 rollback segments are active.
+2022-12-16 20:56:42 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-12-16 20:56:42 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-12-16 20:56:42 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-12-16 20:56:42 0 [Note] InnoDB: 10.7.4 started; log sequence number 42173; transaction id 14
+2022-12-16 20:56:42 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-12-16 20:56:42 0 [ERROR] mysqld: File './ddl_recovery.log' not found (Errcode: 2 "No such file or directory")
+2022-12-16 20:56:42 0 [Note] Server socket created on IP: '127.0.0.1'.
+2022-12-16 20:56:42 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-12-16 20:56:42 0 [Note] InnoDB: Buffer pool(s) load completed at 221216 20:56:42
+2022-12-16 20:56:42 0 [Note] mysqld: ready for connections.
+Version: '10.7.4-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  Source distribution
+2022-12-16 20:56:43 0 [Note] mysqld (initiated by: root[root] @ localhost []): Normal shutdown
+2022-12-16 20:56:43 0 [Note] InnoDB: FTS optimize thread exiting.
+2022-12-16 20:56:43 0 [Note] InnoDB: Starting shutdown...
+2022-12-16 20:56:43 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2022-12-16 20:56:43 0 [Note] InnoDB: Buffer pool(s) dump completed at 221216 20:56:43
+2022-12-16 20:56:43 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2022-12-16 20:56:43 0 [Note] InnoDB: Shutdown completed; log sequence number 42185; transaction id 15
+2022-12-16 20:56:43 0 [Note] mysqld: Shutdown complete
+
+2022-12-16 20:58:00 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-16 20:58:00 0 [Note] InnoDB: Number of transaction pools: 1
+2022-12-16 20:58:00 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2022-12-16 20:58:00 0 [Note] InnoDB: Using Linux native AIO
+2022-12-16 20:58:00 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2022-12-16 20:58:00 0 [Note] InnoDB: Completed initialization of buffer pool
+221216 20:58:00 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
+2022-12-16 20:58:00 0 [Note] InnoDB: 128 rollback segments are active.
+2022-12-16 20:58:00 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-12-16 20:58:00 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-12-16 20:58:00 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-12-16 20:58:00 0 [Note] InnoDB: 10.7.4 started; log sequence number 42185; transaction id 14
+2022-12-16 20:58:00 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-12-16 20:58:00 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-12-16 20:58:00 0 [Note] Server socket created on IP: '127.0.0.1'.
+2022-12-16 20:58:00 0 [Note] InnoDB: Buffer pool(s) load completed at 221216 20:58:00
+2022-12-16 20:58:00 0 [Note] mysqld: ready for connections.
+Version: '10.7.4-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  Source distribution
+2022-12-16 20:58:00 0 [Note] /usr/sbin/mariadbd (server 10.7.4-MariaDB) starting as process 743 ...
+2022-12-16 20:58:00 0 [ERROR] mariadbd: Can't lock aria control file '/var/lib/mysql/aria_log_control' for exclusive use, error: 11. Will retry for 30 seconds
+2022-12-16 20:58:01 0 [Note] mysqld (initiated by: root[root] @ localhost []): Normal shutdown
+2022-12-16 20:58:01 0 [Note] InnoDB: FTS optimize thread exiting.
+2022-12-16 20:58:01 0 [Note] InnoDB: Starting shutdown...
+2022-12-16 20:58:01 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2022-12-16 20:58:01 0 [Note] InnoDB: Buffer pool(s) dump completed at 221216 20:58:01
+2022-12-16 20:58:01 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2022-12-16 20:58:01 0 [Note] InnoDB: Shutdown completed; log sequence number 42197; transaction id 15
+2022-12-16 20:58:01 0 [Note] mysqld: Shutdown complete
+
+2022-12-16 20:58:02 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-16 20:58:03 0 [Note] InnoDB: Number of transaction pools: 1
+2022-12-16 20:58:03 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2022-12-16 20:58:03 0 [Note] InnoDB: Using Linux native AIO
+2022-12-16 20:58:03 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2022-12-16 20:58:03 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-16 20:58:03 0 [Note] InnoDB: 128 rollback segments are active.
+2022-12-16 20:58:03 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-12-16 20:58:03 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-12-16 20:58:03 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-12-16 20:58:03 0 [Note] InnoDB: 10.7.4 started; log sequence number 42197; transaction id 14
+2022-12-16 20:58:03 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-12-16 20:58:03 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-12-16 20:58:03 0 [ERROR] mariadbd: File './ddl_recovery.log' not found (Errcode: 2 "No such file or directory")
+2022-12-16 20:58:03 0 [Note] Server socket created on IP: '127.0.0.1'.
+2022-12-16 20:58:03 0 [Note] InnoDB: Buffer pool(s) load completed at 221216 20:58:03
+2022-12-16 20:58:03 0 [Note] /usr/sbin/mariadbd: ready for connections.
+Version: '10.7.4-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  Source distribution
+2022-12-16 22:27:51 6 [Warning] Aborted connection 6 to db: 'lumos' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2022-12-16 22:27:51 5 [Warning] Aborted connection 5 to db: 'lumos' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2022-12-16 22:27:51 0 [Note] /usr/sbin/mariadbd (initiated by: unknown): Normal shutdown
+2022-12-16 22:27:51 0 [Note] InnoDB: FTS optimize thread exiting.
+2022-12-16 22:27:51 0 [Note] InnoDB: Starting shutdown...
+2022-12-16 22:27:51 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2022-12-16 22:27:51 0 [Note] InnoDB: Buffer pool(s) dump completed at 221216 22:27:51
+2022-12-16 22:27:51 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2022-12-16 22:27:51 0 [Note] InnoDB: Shutdown completed; log sequence number 1290044; transaction id 1379
+2022-12-16 22:27:51 0 [Note] /usr/sbin/mariadbd: Shutdown complete
+
+221216 22:27:51 mysqld_safe mysqld from pid file /var/lib/mysql/mysqld.pid ended
+2022-12-16 22:28:06 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-16 22:28:06 0 [Note] InnoDB: Number of transaction pools: 1
+2022-12-16 22:28:06 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2022-12-16 22:28:06 0 [Note] InnoDB: Using Linux native AIO
+2022-12-16 22:28:06 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2022-12-16 22:28:06 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-16 22:28:06 0 [Note] InnoDB: 128 rollback segments are active.
+2022-12-16 22:28:06 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-12-16 22:28:06 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-12-16 22:28:06 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-12-16 22:28:06 0 [Note] InnoDB: 10.7.4 started; log sequence number 1290044; transaction id 1380
+2022-12-16 22:28:06 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-12-16 22:28:06 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-12-16 22:28:06 0 [Note] Server socket created on IP: '127.0.0.1'.
+2022-12-16 22:28:06 0 [Note] mysqld: ready for connections.
+Version: '10.7.4-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  Source distribution
+2022-12-16 22:28:06 0 [Note] InnoDB: Buffer pool(s) load completed at 221216 22:28:06
+2022-12-16 22:28:07 0 [Note] mysqld (initiated by: root[root] @ localhost []): Normal shutdown
+2022-12-16 22:28:07 0 [Note] InnoDB: FTS optimize thread exiting.
+2022-12-16 22:28:07 0 [Note] InnoDB: Starting shutdown...
+2022-12-16 22:28:07 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2022-12-16 22:28:07 0 [Note] InnoDB: Buffer pool(s) dump completed at 221216 22:28:07
+2022-12-16 22:28:07 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2022-12-16 22:28:07 0 [Note] InnoDB: Shutdown completed; log sequence number 1290056; transaction id 1381
+2022-12-16 22:28:07 0 [Note] mysqld: Shutdown complete
+
+221216 22:28:09 mysqld_safe Starting mariadbd daemon with databases from /var/lib/mysql
+2022-12-16 22:28:09 0 [Note] /usr/sbin/mariadbd (server 10.7.4-MariaDB) starting as process 578 ...
+2022-12-16 22:28:09 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2022-12-16 22:28:09 0 [Note] InnoDB: Number of transaction pools: 1
+2022-12-16 22:28:09 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2022-12-16 22:28:09 0 [Note] InnoDB: Using Linux native AIO
+2022-12-16 22:28:09 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2022-12-16 22:28:09 0 [Note] InnoDB: Completed initialization of buffer pool
+2022-12-16 22:28:09 0 [Note] InnoDB: 128 rollback segments are active.
+2022-12-16 22:28:09 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2022-12-16 22:28:09 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2022-12-16 22:28:09 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2022-12-16 22:28:09 0 [Note] InnoDB: 10.7.4 started; log sequence number 1290056; transaction id 1380
+2022-12-16 22:28:09 0 [Note] Plugin 'FEEDBACK' is disabled.
+2022-12-16 22:28:09 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2022-12-16 22:28:09 0 [Note] Server socket created on IP: '127.0.0.1'.
+2022-12-16 22:28:09 0 [Note] /usr/sbin/mariadbd: ready for connections.
+Version: '10.7.4-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  Source distribution
+2022-12-16 22:28:09 0 [Note] InnoDB: Buffer pool(s) load completed at 221216 22:28:09
+2022-12-17  6:28:21 4 [Warning] Aborted connection 4 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 5 [Warning] Aborted connection 5 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 8 [Warning] Aborted connection 8 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 11 [Warning] Aborted connection 11 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 12 [Warning] Aborted connection 12 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 13 [Warning] Aborted connection 13 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 14 [Warning] Aborted connection 14 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 15 [Warning] Aborted connection 15 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 10 [Warning] Aborted connection 10 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 7 [Warning] Aborted connection 7 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:28:21 18 [Warning] Aborted connection 18 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:34:21 6 [Warning] Aborted connection 6 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17  6:34:21 19 [Warning] Aborted connection 19 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17 16:53:48 22 [Warning] Aborted connection 22 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17 17:23:37 24 [Warning] Aborted connection 24 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17 17:23:37 23 [Warning] Aborted connection 23 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17 17:23:43 20 [Warning] Aborted connection 20 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-17 17:23:43 21 [Warning] Aborted connection 21 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18  6:28:22 25 [Warning] Aborted connection 25 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18 16:54:10 29 [Warning] Aborted connection 29 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18 17:24:16 30 [Warning] Aborted connection 30 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18 17:24:16 31 [Warning] Aborted connection 31 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18 17:24:23 27 [Warning] Aborted connection 27 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-18 17:24:23 28 [Warning] Aborted connection 28 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19  1:42:37 32 [Warning] Aborted connection 32 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19  1:42:37 33 [Warning] Aborted connection 33 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19  6:28:22 34 [Warning] Aborted connection 34 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19 16:53:41 38 [Warning] Aborted connection 38 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19 17:26:08 39 [Warning] Aborted connection 39 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19 17:26:08 40 [Warning] Aborted connection 40 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19 17:26:14 37 [Warning] Aborted connection 37 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-19 17:26:14 36 [Warning] Aborted connection 36 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20  4:03:45 42 [Warning] Aborted connection 42 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20  4:03:45 41 [Warning] Aborted connection 41 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20  4:03:46 44 [Warning] Aborted connection 44 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20  4:03:46 43 [Warning] Aborted connection 43 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20  6:28:23 45 [Warning] Aborted connection 45 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20 16:53:57 49 [Warning] Aborted connection 49 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20 17:25:46 51 [Warning] Aborted connection 51 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20 17:25:46 50 [Warning] Aborted connection 50 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20 17:25:51 48 [Warning] Aborted connection 48 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2022-12-20 17:25:51 47 [Warning] Aborted connection 47 to db: 'lumos' user: 'root' host: 'localhost' (Got timeout reading communication packets)

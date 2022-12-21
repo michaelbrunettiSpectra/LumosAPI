@@ -1,0 +1,55 @@
+{"ts":"2022-12-16T20:58:03.083Z", "msg": "Starting"}
+[816] Error loading Python lib '/tmp/_MEItSH8jh/libpython3.10.so.1.0': dlopen: /lib64/libc.so.6: version `GLIBC_2.36' not found (required by /tmp/_MEItSH8jh/libexpat.so.1)
+{"ts":"2022-12-16T22:27:51.588Z", "msg": "Stopping"}
+/bin/sh: line 1: [: KILL: integer expression expected
+{"ts":"2022-12-16T22:28:21.101Z", "msg": "Starting"}
+[648] Error loading Python lib '/tmp/_MEIOnGpDE/libpython3.10.so.1.0': dlopen: /lib64/libc.so.6: version `GLIBC_2.36' not found (required by /tmp/_MEIOnGpDE/libexpat.so.1)
+2022/12/16 22:56:16 http: TLS handshake error from 10.10.11.71:60911: remote error: tls: unknown certificate
+2022/12/16 22:56:16 http: TLS handshake error from 10.10.11.71:60912: remote error: tls: unknown certificate
+2022/12/16 22:56:27 http: TLS handshake error from 10.10.11.71:60915: remote error: tls: unknown certificate
+2022/12/16 22:56:27 http: TLS handshake error from 10.10.11.71:60916: remote error: tls: unknown certificate
+[mysql] 2022/12/17 08:53:48 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 08:53:48 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 08:53:48 connection.go:173: driver: bad connection
+[mysql] 2022/12/17 08:53:48 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 08:53:48 connection.go:173: driver: bad connection
+[mysql] 2022/12/17 08:53:48 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 09:23:36 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 09:23:36 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/17 22:28:21 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 08:54:09 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 08:54:10 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 08:54:10 connection.go:173: driver: bad connection
+[mysql] 2022/12/18 08:54:10 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 09:24:15 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 09:24:15 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 17:41:51 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 17:41:52 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/18 17:41:52 connection.go:173: driver: bad connection
+[mysql] 2022/12/18 22:28:22 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 08:53:40 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 08:53:41 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 08:53:41 connection.go:173: driver: bad connection
+[mysql] 2022/12/19 08:53:41 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 09:26:07 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 09:26:07 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 20:03:41 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 20:03:42 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 20:03:42 connection.go:173: driver: bad connection
+[mysql] 2022/12/19 20:03:45 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 20:03:45 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/19 22:28:22 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 08:53:57 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 08:53:57 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 08:53:57 connection.go:173: driver: bad connection
+[mysql] 2022/12/20 08:53:57 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 09:25:43 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 09:25:43 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 17:46:56 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 17:46:57 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 17:46:57 connection.go:173: driver: bad connection
+[mysql] 2022/12/20 17:47:02 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 17:47:02 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 22:00:05 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 22:00:05 packets.go:123: closing bad idle connection: connection reset by peer
+[mysql] 2022/12/20 22:09:32 packets.go:123: closing bad idle connection: connection reset by peer

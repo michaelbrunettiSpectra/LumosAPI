@@ -1,0 +1,23 @@
+crash.log.path : /media/root/log/motion/motionCrash.log
+reduced.trace.path : /RCM_code/small_bundle.tgz
+
+usb.device.path : /dev/usbstick
+usb.mount.path : /mnt/usb
+
+# Config files are read only and part of the package on gen5, therefore these are not user
+# configurable. If needed, they will be removed from here and handled by Lumos/BlueScale like other
+# user configurable settings
+selective.snowplow.setting : false
+solenoid.unlock.setting : false
+tape.barcode.verification.mode : false
+security.audit.at.startup : false
+verify.magazine.barcodes.at.startup : true
+
+r4.injection.path : /RCM_code/config/injection.xml
+r4.log.dir : /media/root/log/motion/r4/
+r4.logging.enabled.mover0 : CollectOnFailure
+r4.logging.enabled.mover1 : CollectOnFailure
+r4.camera.enabled.mover0 : On
+r4.camera.enabled.mover1 : On
+r4.camera.logging.mover0 : CollectOnFailure
+r4.camera.logging.mover1 : CollectOnFailure

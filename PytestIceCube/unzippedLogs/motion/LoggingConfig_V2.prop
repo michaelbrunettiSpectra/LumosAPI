@@ -1,0 +1,59 @@
+# Logging configuration file V1
+logging.formatters.f1.class = PatternFormatter
+logging.formatters.f1.pattern = [%Y-%m-%d %H:%M:%S.%i] %p: %t
+
+logging.channels.c1.class = ConsoleChannel
+logging.channels.c1.formatter = f1
+
+#
+# This channel (c2) is explicitly looked for in motion.cpp
+logging.channels.c2.class = NoThrowFileChannel
+logging.channels.c2.formatter = f1
+logging.channels.c2.path = /media/root/log/motion/motion.log
+logging.channels.c2.path2 = /RCM_code/log/motion.log
+logging.channels.c2.path2Size = 40 M
+logging.channels.c2.rotation = 2 M
+logging.channels.c2.archive = timestamp
+logging.channels.c2.purgeAge = 12 months
+logging.channels.c2.compress = true
+
+# At one time this was an optional RemoteSyslogChannel
+logging.channels.c4.class = NullChannel
+
+# logging channel for the error log file
+logging.channels.c6.class = NoThrowFileChannel
+logging.channels.c6.formatter = f1
+logging.channels.c6.path = /media/root/log/motion/motion.error.log
+logging.channels.c6.path2 = /RCM_code/log/motion.error.log
+logging.channels.c6.path2Size = 40 M
+logging.channels.c6.rotation = 2 M
+logging.channels.c6.archive = timestamp
+logging.channels.c6.purgeAge = 12 months
+logging.channels.c6.compress = true
+
+# logging channel to filter errors for the error log
+logging.channels.c7.class = LevelFilterChannel
+logging.channels.c7.level = error
+logging.channels.c7.channel = c6
+
+logging.channels.c3.class = SplitterChannel
+logging.channels.c3.channels = c1,c2,c4,c7
+
+#
+# Use asynchronous channel for everything
+logging.channels.c5.class = AsyncChannel
+logging.channels.c5.channel = c3
+
+logging.loggers.root.channel = c5
+logging.loggers.root.level = warning
+
+# This logger and channel is for motionWrap.log
+logging.loggers.l1.name = WrapLogger
+logging.loggers.l1.channel.class = NoThrowFileChannel
+logging.loggers.l1.channel.formatter = f1
+logging.loggers.l1.channel.path  = /media/root/log/motion/motionWrap.log
+logging.loggers.l1.channel.path2 = /RCM_code/log/motionWrap.log
+logging.loggers.l1.channel.rotation = 2 M
+logging.loggers.l1.channel.archive = timestamp
+logging.loggers.l1.channel.purgeCount = 80
+logging.loggers.l1.channel.compress = true

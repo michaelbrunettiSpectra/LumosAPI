@@ -34,7 +34,7 @@ def test_gatherLog():
 def test_getAllGatheredLogs():
     gatheredLogsRequest = library.getRequest(icecubeAPI.getGatheredLogs())
     assert gatheredLogsRequest[1] == 200
-    assert gatheredLogsRequest[0]['count'] > 1
+    assert gatheredLogsRequest[0]['count'] >= 1
 
 def test_logContents():
     lumosHelperFuncs.unzipLogs(logName)
